@@ -11,7 +11,7 @@ import java.net.URL;
 public class FlinkSourceUtil {
     public static DataStream<UserBehavior> userBehaviorSource(StreamExecutionEnvironment env, String userBehaviorFile) {
         URL inputCsv = FlinkSourceUtil.class.getClassLoader().getResource(userBehaviorFile);
-        System.out.printf("input csv path = %s", inputCsv.getPath());
+        System.out.printf("input csv path = %s\n", inputCsv.getPath());
         SingleOutputStreamOperator<UserBehavior> inputSource = env.readTextFile(inputCsv.getPath())
                 .map(new MapFunction<String, UserBehavior>() {
             @Override

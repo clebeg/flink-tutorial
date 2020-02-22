@@ -1,4 +1,4 @@
-package bigdata.clebeg.cn;
+package bigdata.clebeg.cn.deep;
 
 import bigdata.clebeg.cn.model.UserBehavior;
 import bigdata.clebeg.cn.utils.DBUtil;
